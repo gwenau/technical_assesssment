@@ -8,8 +8,9 @@ import {Component} from "angular2/core";
       (click)="onItemClicked(clientListItem)">
       {{clientListItem.name}}</li>
     </ul>
-    <input type="text" [(ngModel)]="selectedItem.name" #newItem>
-    <button (click)="onAddItem(newItem)">Add item</button>
+    <input type="text" [(ngModel)]="selectedItem.name"/>
+    <br />
+    <input type="text" #newItem/><button (click)="onAddItem(newItem)">Add item</button>
   `
 })
 
