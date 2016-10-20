@@ -9,17 +9,21 @@ import {Component} from "angular2/core";
       {{clientListItem.name}}</li>
     </ul>
     <input type="text" [(ngModel)]="selectedItem.name"/>
+    <button (click)="onDeleteItem()">Delete item</button>
     <br />
-    <input type="text" #newItem/><button (click)="onAddItem(newItem)">Add item</button>
+    <input type="text" #newItem/>
+    <button (click)="onAddItem(newItem)">Add item</button>
   `
 })
 
 export class ClientListComponent {
+
   public clientListItems = [
     {name: 'Matthew'}, 
     {name: 'Justin'}, 
     {name: 'Gramos'},
   ];
+
   public selectedItem = {name: ""};
 
   onItemClicked(clientListItem){
@@ -28,6 +32,10 @@ export class ClientListComponent {
 
   onAddItem(newItem){
     this.clientListItems.push({name: newItem.value})
+  }
+
+  onDeleteItem(){
+    this.clientListItems.splice(this.clientListItems.indexOf(this.selectedItem), 1);
   }
 
 }
