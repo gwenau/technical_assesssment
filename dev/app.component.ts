@@ -3,8 +3,8 @@ import {Component} from 'angular2/core';
 @Component({
     selector: 'my-app',
     template: `
-        <h1>Angular 2 Boilerplate</h1>
-        <p>Hello World!</p>
+        <h1>Work Ninja</h1>
+        <client-list></client-list>
     `,
 })
 export class AppComponent {
