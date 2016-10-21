@@ -1,23 +1,14 @@
-import {Component} from "angular2/core";
+import {Component, View} from "angular2/core";
 
 import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 @Component({
-  selector: "client-list",
-  template: `
-    <ul>
-      <li *ngFor="#clientListItem of clientListItems"
-      (click)="onItemClicked(clientListItem)">
-      {{clientListItem.name}}</li>
-    </ul>
-    <input type="text" [(ngModel)]="selectedItem.name"/>
-    <button (click)="onDeleteItem()">Delete item</button>
-    <br />
-    <input type="text" #newItem/>
-    <button (click)="onAddItem(newItem)">Add item</button>
-    <br/>
-    <alert type="success" class="alert alert-success" role="alert">Hello world</alert>
-  `
+  selector: "client-list"
+})
+
+@View({
+  templateUrl: '/templates/clients.html',
+  directives: []
 })
 
 export class ClientListComponent {
