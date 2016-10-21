@@ -7,12 +7,14 @@ import {ClientListComponent} from './clients.component';
 
 @View({
     templateUrl: '/templates/landing_page.html',
-    directives: [ClientListComponent]
+    directives: [AppComponent, ClientListComponent]
 })
 
 export class AppComponent {
+  public current_page = 'home'
 
-  public page = ["home", "clients", "client_create", "client_edit"]
-  public current_page = "home"
-
+  goToPage(page){
+    this.current_page = page
+    console.log(this.current_page)
+  }
 }
