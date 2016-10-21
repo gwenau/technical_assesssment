@@ -12,6 +12,7 @@ import {ClientListComponent} from './clients.component';
 
 export class AppComponent {
 
-  public client = {name: "", email: "", password: ""}
+  public page = ["home", "clients", "client_create", "client_edit"]
+  public current_page = "home"
 
 }
