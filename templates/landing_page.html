@@ -1,8 +1,0 @@
-<div *ngIf="[rootVar] == 'home'">
-  <h1>Work Ninja</h1>
-  <h2>What can I do for you master?</h2>
-  <button class="btn-primary" (click)="showSection('clients')">See list of new clients</button>
-  <button class="btn-primary" (click)="showSection('add_client')">Create a new client</button>
-</div>
-<client-list *ngIf="[rootVar] == 'clients'"></client-list>
-<button *ngIf="[rootVar] == 'clients'" class="btn-primary" (click)="showSection('home')">Home</button>
