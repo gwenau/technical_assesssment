@@ -7,7 +7,7 @@ import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 })
 
 @View({
-  templateUrl: '/templates/clients.html',
+  templateUrl: 'app/clients.html',
   directives: []
 })
 

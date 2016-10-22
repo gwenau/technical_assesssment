@@ -6,7 +6,7 @@ import {ClientListComponent} from './clients.component';
 })
 
 @View({
-    templateUrl: '/templates/landing_page.html',
+    templateUrl: 'app/landing_page.html',
     directives: [AppComponent, ClientListComponent]
 })
 
