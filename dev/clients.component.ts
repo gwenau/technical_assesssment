@@ -1,5 +1,5 @@
 import {Component, View} from "angular2/core";
-
+import {NavigationService} from '../services/navigation.service';
 import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 @Component({
@@ -8,7 +8,7 @@ import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 @View({
   templateUrl: '/templates/clients.html',
-  directives: []
+  directives: [NavigationService]
 })
 
 export class ClientListComponent {

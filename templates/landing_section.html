@@ -1,7 +1,5 @@
-<div *ngIf="[current_page] == 'home'">
-  <h1>Work Ninja</h1>
+<div>
   <h2>What can I do for you master?</h2>
   <button class="btn-primary" (click)="goToPage('clients')">See list of new clients</button>
   <button class="btn-primary" (click)="goToPage('clients')">Create a new client</button>
 </div>
-<client-list *ngIf="[current_page] == 'clients'"></client-list>

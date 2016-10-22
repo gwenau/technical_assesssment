@@ -6,7 +6,7 @@ export class NavigationService {
 
   constructor() {}
 
-  public current_page = 'home';
+  public current_page = 'clients';
 
   public goToPage(page){
     debugger
