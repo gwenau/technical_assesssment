@@ -18,6 +18,11 @@
     <script src="config.js"></script>
     <script>
       var rootVar = 'home';
+      var rootClients = [
+        {name: 'Matthew'}, 
+        {name: 'Justin'}, 
+        {name: 'Gramos'},
+      ];
       System.import('app/main')
         .then(null, console.error.bind(console))
         .then((module) => {

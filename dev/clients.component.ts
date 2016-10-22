@@ -13,13 +13,9 @@ import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 export class ClientListComponent {
 
-  constructor(@Inject('rootVar') rootVar:string ) {  }
+  constructor(@Inject('rootVar') rootVar:string) {  }
 
-  public clientListItems = [
-    {name: 'Matthew'}, 
-    {name: 'Justin'}, 
-    {name: 'Gramos'},
-  ];
+  public clientListItems = rootClients
 
   public selectedItem = {name: ""};
 
@@ -29,6 +25,7 @@ export class ClientListComponent {
 
   onAddItem(newItem){
     this.clientListItems.push({name: newItem.value})
+    rootClients = clientListItems;
   }
 
   onDeleteItem(){
