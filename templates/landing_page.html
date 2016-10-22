@@ -1,7 +1,8 @@
-<div *ngIf="[current_page] == 'home'">
+<div *ngIf="[rootVar] == 'home'">
   <h1>Work Ninja</h1>
   <h2>What can I do for you master?</h2>
-  <button class="btn-primary" (click)="goToPage('clients')">See list of new clients</button>
-  <button class="btn-primary" (click)="goToPage('clients')">Create a new client</button>
+  <button class="btn-primary" (click)="showSection('clients')">See list of new clients</button>
+  <button class="btn-primary" (click)="showSection('add_client')">Create a new client</button>
 </div>
-<client-list *ngIf="[current_page] == 'clients'"></client-list>
+<client-list *ngIf="[rootVar] == 'clients'"></client-list>
+<button *ngIf="[rootVar] == 'clients'" class="btn-primary" (click)="showSection('home')">Home</button>

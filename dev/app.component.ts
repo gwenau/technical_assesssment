@@ -1,5 +1,4 @@
-import {Component, View} from 'angular2/core';
-import {NavigationService} from '../services/navigation.service';
+import {Component, View, Inject} from 'angular2/core';
 import {ClientListComponent} from './clients.component';
 
 @Component({
@@ -9,16 +8,16 @@ import {ClientListComponent} from './clients.component';
 @View({
     templateUrl: '/templates/landing_page.html',
     directives: [AppComponent, ClientListComponent]
-    providers: [NavigationService]
 })
 
 export class AppComponent {
 
-  // constructor(public navigationService:NavigationService) {
-  // }
+  constructor(@Inject('rootVar') rootVar:string ) {  }
 
-  // openPage(page){
-  //   debugger
-  //   return this.navigationService.goToPage(page);
-  // }
+  public rootVar = 'home'
+
+  showSection(section){
+    this.rootVar = section
+  }
+
 }

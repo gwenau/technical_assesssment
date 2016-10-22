@@ -1,4 +1,4 @@
-import {Component, View} from "angular2/core";
+import {Component, View, Inject} from "angular2/core";
 
 import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
@@ -12,6 +12,8 @@ import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 })
 
 export class ClientListComponent {
+
+  constructor(@Inject('rootVar') rootVar:string ) {  }
 
   public clientListItems = [
     {name: 'Matthew'}, 
