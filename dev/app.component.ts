@@ -1,4 +1,5 @@
 import {Component, View} from 'angular2/core';
+import {NavigationService} from '../services/navigation.service';
 import {ClientListComponent} from './clients.component';
 
 @Component({
@@ -8,13 +9,16 @@ import {ClientListComponent} from './clients.component';
 @View({
     templateUrl: '/templates/landing_page.html',
     directives: [AppComponent, ClientListComponent]
+    providers: [NavigationService]
 })
 
 export class AppComponent {
-  public current_page = 'home'
 
-  goToPage(page){
-    this.current_page = page
-    console.log(this.current_page)
-  }
+  // constructor(public navigationService:NavigationService) {
+  // }
+
+  // openPage(page){
+  //   debugger
+  //   return this.navigationService.goToPage(page);
+  // }
 }

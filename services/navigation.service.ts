@@ -9,6 +9,7 @@ export class NavigationService {
   public current_page = 'home';
 
   public goToPage(page){
+    debugger
     this.current_page = page
   }
 
