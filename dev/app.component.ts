@@ -1,5 +1,6 @@
 import {Component, View, Inject} from 'angular2/core';
 import {ClientListComponent} from './clients.component';
+import {AddClientComponent} from './client_add.component';
 
 @Component({
     selector: 'my-app'
@@ -7,7 +8,7 @@ import {ClientListComponent} from './clients.component';
 
 @View({
     templateUrl: 'app/landing_page.html',
-    directives: [AppComponent, ClientListComponent]
+    directives: [AppComponent, ClientListComponent, AddClientComponent]
 })
 
 export class AppComponent {
