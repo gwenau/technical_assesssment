@@ -1,17 +1,27 @@
 <div *ngFor="#clientListItem of clientListItems">
   <div class="row">
-    <div class="col-sm-3">
-      <img src="">
+    <div class="col-sm-2">
+      <img src="http://workninja.com/wp-content/uploads/original_workninja_logo_green.gif" alt="image">
     </div>
-    <div class="col-sm-9">
+    <div class="col-sm-10">
       <h3 (click)="onItemClicked(clientListItem)">
           {{clientListItem.business_name}}</h3>
       <div class="row">
-        <div class="col-sm-4">
-          <h4>{{clientListItem.abn}}</h4>
-          <p>{{clientListItem.contact_email}}</p>
+        <div class="col-sm-5">
+          <h4>{{clientListItem.country}}</h4>
+          <p>
+            Email: {{clientListItem.contact_email}}<br />
+            ABN: {{clientListItem.abn}}
+          </p>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-3">
+          <p>
+            Address:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;{{clientListItem.address}}<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;{{clientListItem.suburb}}<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;{{clientListItem.postcode}}<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;{{clientListItem.state}}
+          </p>
         </div>
         <div class="col-sm-4">
           <button class="btn btn-default" (click)="editItem()">Edit</button>
