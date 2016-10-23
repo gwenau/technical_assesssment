@@ -25,6 +25,11 @@ var imagemin = require('gulp-imagemin');
 
 var tsProject = typescript.createProject('tsconfig.json');
 
+gulp.task('bootstrap-css', function () {
+    return gulp.src(assetsDev + 'bootstrap.min.css')
+        .pipe(gulp.dest(assetsProd + 'css/'));
+});
+
 gulp.task('build-css', function () {
     return gulp.src(assetsDev + 'scss/*.scss')
         .pipe(sourcemaps.init())
@@ -63,4 +68,4 @@ gulp.task('watch', function () {
     gulp.watch(assetsDev + 'img/*', ['build-img']);
 });
 
-gulp.task('default', ['watch', 'build-ts', 'build-css', 'build-img', 'build-html']);
+gulp.task('default', ['watch', 'build-ts', 'bootstrap-css', 'build-css', 'build-img', 'build-html']);
