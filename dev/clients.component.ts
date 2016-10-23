@@ -17,14 +17,14 @@ export class ClientListComponent {
 
   public clientListItems = rootClients
 
-  public selectedItem = {name: ""};
+  public selectedItem = {busines_name: ""};
 
   onItemClicked(clientListItem){
     this.selectedItem = clientListItem;
   }
 
   onAddItem(newItem){
-    this.clientListItems.push({name: newItem.value})
+    this.clientListItems.push({busines_name: newItem.value})
     rootClients = clientListItems;
   }
 

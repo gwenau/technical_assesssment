@@ -19,9 +19,40 @@
     <script>
       var rootVar = 'home';
       var rootClients = [
-        {name: 'Matthew'}, 
-        {name: 'Justin'}, 
-        {name: 'Gramos'},
+        {
+            id: 1, 
+            business_name: "Matthew's Business", 
+            abn: 49273452459, 
+            contact_email: "matthew@email.com", 
+            address: 'hello', 
+            suburb: 'sydney', 
+            postcode: 2000, 
+            country: 'Australia', 
+            state: "NSW", 
+            picture: ""
+        }, 
+        {   id: 2, 
+            business_name: "Justin's Business", 
+            abn: 79053374050, 
+            contact_email: "justin@email.com", 
+            address: 'hello', 
+            suburb: 'sydney', 
+            postcode: 2000, 
+            country: 'Australia', 
+            state: "NSW", 
+            picture: ""
+        },
+        {   id: 3, 
+            business_name: "Gramos' Business", 
+            abn: 78066055281, 
+            contact_email: "gramos@email.com", 
+            address: 'hello', 
+            suburb: 'sydney', 
+            postcode: 2000, 
+            country: 'Australia', 
+            state: "NSW", 
+            picture: ""
+        }
       ];
       System.import('app/main')
         .then(null, console.error.bind(console))
