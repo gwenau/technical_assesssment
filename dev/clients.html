@@ -3,18 +3,21 @@
     <div class="col-sm-3">
       <img src="">
     </div>
-    <div class="col-sm-3">
-      <h3 
-    (click)="onItemClicked(clientListItem)">
-      {{clientListItem.business_name}}</h3>
-      <h4>{{clientListItem.abn}}</h4>
-      <p>{{clientListItem.contact_email}}</p>
-    </div>
-    <div class="col-sm-3">
-    </div>
-    <div class="col-sm-3">
-      <button class="btn btn-default" (click)="editItem()">Edit</button>
-      <button class="btn btn-default" (click)="onDeleteItem()">Delete</button>
+    <div class="col-sm-9">
+      <h3 (click)="onItemClicked(clientListItem)">
+          {{clientListItem.business_name}}</h3>
+      <div class="row">
+        <div class="col-sm-4">
+          <h4>{{clientListItem.abn}}</h4>
+          <p>{{clientListItem.contact_email}}</p>
+        </div>
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+          <button class="btn btn-default" (click)="editItem()">Edit</button>
+          <button class="btn btn-default" (click)="onDeleteItem()">Delete</button>
+        </div>
+      </div>
     </div>
   </div>
 </div> 
