@@ -9,9 +9,13 @@ body {
   text-align: center;
 }
 
+$primary-brand-colour:    #00be6d;
+$primary-heading-colour: #00a55e;
+
 h3 {
   margin-top: 0px;
   font-size: 24px;
+  color: $primary-heading-colour;
 }
 
 p {
