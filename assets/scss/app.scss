@@ -12,6 +12,12 @@ body {
 $primary-brand-colour:    #00be6d;
 $primary-heading-colour: #00a55e;
 
+h2 {
+  color: $primary-heading-colour;
+  font-weight: 600;
+  text-align: center;
+}
+
 h3 {
   margin-top: 0px;
   font-size: 24px;
