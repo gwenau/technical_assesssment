@@ -1,7 +1,5 @@
 import {Component, View, Inject} from "angular2/core";
 
-import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
-
 @Component({
   selector: "client-list"
 })
