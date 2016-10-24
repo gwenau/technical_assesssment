@@ -7,10 +7,12 @@
             <input class="form-control" id="name" type="text" (ngModel)="newClient.name" required>
         </div>
     </div>
-    <p>
-        <label>Email:</label>
-        <input type="email" [(ngModel)]="newClient.contact_email" required>
-    </p>
+    <div class="form-group">
+        <label for="email" class="col-sm-4 control-label">Email:</label>
+        <div class="col-sm-5">
+            <input class="form-control" id="email" type="emails" (ngModel)="newClient.email" required>
+        </div>
+    </div>
     <p>
       <button type="submit" [disabled]="!newClientForm.valid">Submit</button>
     </p>
