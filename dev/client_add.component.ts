@@ -13,11 +13,23 @@ import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 export class AddClientComponent {
 
+  public newItem = 
+        {   id: null, 
+            business_name: "", 
+            abn: null, 
+            contact_email: "", 
+            address: '', 
+            suburb: '', 
+            postcode: 2000, 
+            country: '', 
+            state: "", 
+            picture: ""
+        },
+
   constructor(@Inject('rootVar') rootVar:string) {  }
 
   onAddItem(newItem){
-    this.clientListItems.push({name: newItem.value})
-    rootClients = clientListItems;
+    rootClients.push({business_name: newItem.value})
   }
 
 }
