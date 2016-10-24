@@ -16,14 +16,14 @@
               ABN: {{clientListItem.abn}}
             </p>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-4">
             <h4>Address:</h4>
             <p>
               <span class="hidden-xs indent"></span>{{clientListItem.address}}<br />
               <span class="hidden-xs indent"></span>{{clientListItem.suburb}}, {{clientListItem.postcode}}, {{clientListItem.state}}
             </p>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-3">
             <button class="btn btn-link" (click)="onEditItem(clientListItem)">Edit</button>
             <button class="btn btn-link" (click)="onDeleteItem()">Delete</button>
           </div>
