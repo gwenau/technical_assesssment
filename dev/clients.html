@@ -3,7 +3,7 @@
   <div class="panel">
     <div class="row">
       <div class="col-sm-2">
-        <img src="http://workninja.com/wp-content/uploads/original_workninja_logo_green.gif" alt="image">
+        <img src="{{clientListItem.picture}}" alt="image">
       </div>
       <div class="col-sm-10">
         <h3 (click)="onItemClicked(clientListItem)">
@@ -87,7 +87,7 @@
                 <div class="form-group">
                     <label for="picture" class="col-sm-3 control-label">Link to business logo:</label>
                     <div class="col-sm-8">
-                        <input class="form-control" id="picture" type="text" (ngModel)="clientListItem.picture">
+                        <input class="form-control" id="picture" type="text" [(ngModel)]="clientListItem.picture">
                     </div>
                 </div>
                 <div class="form-group">
