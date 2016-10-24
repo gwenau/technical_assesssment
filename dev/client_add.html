@@ -1,46 +1,66 @@
 <h2>Create a New Client</h2>
 
-<form class="form-horizontal" #newClient #newClientForm="ngForm" (ngSubmit)="onAddClient(newClient)">
-    <div class="form-group">
-        <label for="name" class="col-sm-4 control-label">Business Name:</label>
-        <div class="col-sm-5">
-            <input class="form-control" id="name" type="text" (ngModel)="newClient.name" required>
+<div class="panel">
+    <form class="form-horizontal" #newClient #newClientForm="ngForm" (ngSubmit)="onAddClient(newClient)">
+        <div class="form-group">
+            <label for="business_name" class="col-sm-4 control-label">Business name:</label>
+            <div class="col-sm-5">
+                <input class="form-control" id="business_name" type="text" (ngModel)="newClient.business_name" required>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label for="abn" class="col-sm-4 control-label">ABN:</label>
-        <div class="col-sm-5">
-            <input class="form-control" id="abn" type="number" (ngModel)="newClient.abn" required>
+        <div class="form-group">
+            <label for="abn" class="col-sm-4 control-label">ABN:</label>
+            <div class="col-sm-5">
+                <input class="form-control" id="abn" type="number" (ngModel)="newClient.abn" required>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label for="email" class="col-sm-4 control-label">Email:</label>
-        <div class="col-sm-5">
-            <input class="form-control" id="email" type="emails" (ngModel)="newClient.email" required>
+        <div class="form-group">
+            <label for="contact_email" class="col-sm-4 control-label">Email:</label>
+            <div class="col-sm-5">
+                <input class="form-control" id="contact_email" type="emails" (ngModel)="newClient.contact_email" required>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label for="address" class="col-sm-4 control-label">Address:</label>
-        <div class="col-sm-5">
-            <input class="form-control" id="address" type="text" (ngModel)="newClient.address" required>
+        <div class="form-group">
+            <label for="address" class="col-sm-4 control-label">Address:</label>
+            <div class="col-sm-5">
+                <input class="form-control" id="address" type="text" (ngModel)="newClient.address" required>
+            </div>
         </div>
-    </div>
-
-
-            {
-            id: 1, 
-            business_name: "Matthew's Business", 
-            abn: 49273452459, 
-            contact_email: "matthew@email.com", 
-            address: '29 Wharf street', 
-            suburb: 'sydney', 
-            postcode: 2000, 
-            country: 'Australia', 
-            state: "NSW", 
-            picture: ""
-        }, 
-    <p>
-      <button type="submit" [disabled]="!newClientForm.valid">Submit</button>
-    </p>
-    <p [hidden]="new_client_added">New client has been added</p>
-</form>
+        <div class="form-group">
+            <label for="suburb" class="col-sm-4 control-label">Suburb:</label>
+            <div class="col-sm-5">
+                <input class="form-control" id="suburb" type="text" (ngModel)="newClient.suburb" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="postcode" class="col-sm-4 control-label">Postcode:</label>
+            <div class="col-sm-5">
+                <input class="form-control" id="postcode" type="text" (ngModel)="newClient.postcode" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="state" class="col-sm-4 control-label">State:</label>
+            <div class="col-sm-5">
+                <input class="form-control" id="state" type="text" (ngModel)="newClient.state" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="country" class="col-sm-4 control-label">Country:</label>
+            <div class="col-sm-5">
+                <input class="form-control" id="country" type="text" (ngModel)="newClient.country" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="picture" class="col-sm-4 control-label">Link to business logo:</label>
+            <div class="col-sm-5">
+                <input class="form-control" id="picture" type="text" (ngModel)="newClient.picture">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-5">
+                <button class="btn btn-primary"type="submit" [disabled]="!newClientForm.valid">Submit</button>
+            </div>
+        </div>
+        <p [hidden]="new_client_added">New client has been added</p>
+    </form>
+</div>

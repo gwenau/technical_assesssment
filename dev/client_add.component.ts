@@ -36,8 +36,14 @@ export class AddClientComponent {
   onAddClient(newClient){
     this.id = rootClients.length+1
     this.new_client["id"] = this.id
-    this.new_client["business_name"] = newClient.name.value
-    this.new_client["contact_email"] = newClient.email.value
+    this.new_client["business_name"] = newClient.business_name.value
+    this.new_client["contact_email"] = newClient.contact_email.value
+    this.new_client["address"] = newClient.address.value
+    this.new_client["suburb"] = newClient.suburb.value
+    this.new_client["postcode"] = newClient.postcode.value
+    this.new_client["country"] = newClient.country.value
+    this.new_client["state"] = newClient.state.value
+    this.new_client["picture"] = newClient.picture.value
     rootClients.push(this.new_client)
     this.new_client = {}
     this.new_client_added = false
