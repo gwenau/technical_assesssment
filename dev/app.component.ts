@@ -1,12 +1,9 @@
-import {Component, View, Inject} from 'angular2/core';
+import {Component, Inject} from 'angular2/core';
 import {ClientListComponent} from './clients.component';
 import {AddClientComponent} from './client_add.component';
 
 @Component({
     selector: 'my-app'
-})
-
-@View({
     templateUrl: 'app/landing_page.html',
     directives: [AppComponent, ClientListComponent, AddClientComponent]
 })

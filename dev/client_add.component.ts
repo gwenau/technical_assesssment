@@ -1,12 +1,7 @@
-import {Component, View, Inject} from "angular2/core";
-
-import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
+import {Component, Inject} from "angular2/core";
 
 @Component({
-  selector: "add-client"
-})
-
-@View({
+  selector: "add-client",
   templateUrl: 'app/client_add.html',
   directives: []
 })
