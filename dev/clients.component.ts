@@ -19,15 +19,6 @@ export class ClientListComponent {
 
   public selectedItem = {busines_name: ""};
 
-  onItemClicked(clientListItem){
-    this.selectedItem = clientListItem;
-  }
-
-  onAddItem(newItem){
-    this.clientListItems.push({busines_name: newItem.value})
-    rootClients = clientListItems;
-  }
-
   onDeleteItem(){
     this.clientListItems.splice(this.clientListItems.indexOf(this.selectedItem), 1);
   }
