@@ -18,9 +18,10 @@ export class AddClientComponent {
 
   new_client_added = true
 
+  public id = rootClients.length+1
+
   onAddClient(newClient){
-    // id = rootclients.length + 1
-    newClient["id"] = 4
+    newClient["id"] = this.id
     rootClients.push(newClient)
     newClient = {}
     this.new_client_added = false
