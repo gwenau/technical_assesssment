@@ -3,7 +3,7 @@
 Usage
 
 1: Clone repo
-git clone https://github.com/gwenau/technical_assesssment_work_ninja.git
+git clone https://github.com/gwenau/technical_assesssment.git
 
 2: Install packages
 npm install
