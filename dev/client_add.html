@@ -8,11 +8,37 @@
         </div>
     </div>
     <div class="form-group">
+        <label for="abn" class="col-sm-4 control-label">ABN:</label>
+        <div class="col-sm-5">
+            <input class="form-control" id="abn" type="number" (ngModel)="newClient.abn" required>
+        </div>
+    </div>
+    <div class="form-group">
         <label for="email" class="col-sm-4 control-label">Email:</label>
         <div class="col-sm-5">
             <input class="form-control" id="email" type="emails" (ngModel)="newClient.email" required>
         </div>
     </div>
+    <div class="form-group">
+        <label for="address" class="col-sm-4 control-label">Address:</label>
+        <div class="col-sm-5">
+            <input class="form-control" id="address" type="text" (ngModel)="newClient.address" required>
+        </div>
+    </div>
+
+
+            {
+            id: 1, 
+            business_name: "Matthew's Business", 
+            abn: 49273452459, 
+            contact_email: "matthew@email.com", 
+            address: '29 Wharf street', 
+            suburb: 'sydney', 
+            postcode: 2000, 
+            country: 'Australia', 
+            state: "NSW", 
+            picture: ""
+        }, 
     <p>
       <button type="submit" [disabled]="!newClientForm.valid">Submit</button>
     </p>
