@@ -30,8 +30,8 @@ export class ClientListComponent {
     item["edit_mode"] = true
   }
 
-  onSaveEditItem(){
-    edit_client_updated = true
+  onSaveEditItem(item){
+    item["edit_mode"] = false
   }
 
 }

@@ -29,37 +29,37 @@
           </div>
         </div>
         <div *ngIf="clientListItem.edit_mode">
-          <form class="form-horizontal edit_form" #editClient #editClientForm="ngForm" (ngSubmit)="onAddClient(editClient)">
+          <form class="form-horizontal edit_form" #editClientForm="ngForm" (ngSubmit)="onSaveEditItem(clientListItem)">
             <div class="row">
               <div class="col-sm-6">
                 <div class="form-group">
                     <label for="business_name" class="col-sm-3 control-label">Business name:</label>
                     <div class="col-sm-8">
-                        <input class="form-control" id="business_name" type="text" (ngModel)="editClient.business_name" required>
+                        <input class="form-control" id="business_name" type="text" [(ngModel)]="clientListItem.business_name" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="abn" class="col-sm-3 control-label">ABN:</label>
                     <div class="col-sm-8">
-                        <input class="form-control" id="abn" type="number" (ngModel)="editClient.abn" required>
+                        <input class="form-control" id="abn" type="number" [(ngModel)]="clientListItem.abn" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="contact_email" class="col-sm-3 control-label">Email:</label>
                     <div class="col-sm-8">
-                        <input class="form-control" id="contact_email" type="emails" (ngModel)="editClient.contact_email" required>
+                        <input class="form-control" id="contact_email" type="emails" [(ngModel)]="clientListItem.contact_email" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="address" class="col-sm-3 control-label">Address:</label>
                     <div class="col-sm-8">
-                        <input class="form-control" id="address" type="text" (ngModel)="editClient.address" required>
+                        <input class="form-control" id="address" type="text" [(ngModel)]="clientListItem.address" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="suburb" class="col-sm-3 control-label">Suburb:</label>
                     <div class="col-sm-8">
-                        <input class="form-control" id="suburb" type="text" (ngModel)="editClient.suburb" required>
+                        <input class="form-control" id="suburb" type="text" [(ngModel)]="clientListItem.suburb" required>
                     </div>
                 </div>
               </div>
@@ -67,19 +67,19 @@
                 <div class="form-group">
                     <label for="postcode" class="col-sm-3 control-label">Postcode:</label>
                     <div class="col-sm-8">
-                        <input class="form-control" id="postcode" type="text" (ngModel)="editClient.postcode" required>
+                        <input class="form-control" id="postcode" type="text" [(ngModel)]="clientListItem.postcode" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="state" class="col-sm-3 control-label">State:</label>
                     <div class="col-sm-8">
-                        <input class="form-control" id="state" type="text" (ngModel)="editClient.state" required>
+                        <input class="form-control" id="state" type="text" [(ngModel)]="clientListItem.state" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="country" class="col-sm-3 control-label">Country:</label>
                     <div class="col-sm-8">
-                        <select class="form-control" id="country" type="text" (ngModel)="editClient.country" required>
+                        <select class="form-control" id="country" type="text" [(ngModel)]="clientListItem.country" required>
                           <option value="Australia">Australia</option>
                         </select>
                     </div>
@@ -87,7 +87,7 @@
                 <div class="form-group">
                     <label for="picture" class="col-sm-3 control-label">Link to business logo:</label>
                     <div class="col-sm-8">
-                        <input class="form-control" id="picture" type="text" (ngModel)="editClient.picture">
+                        <input class="form-control" id="picture" type="text" (ngModel)="clientListItem.picture">
                     </div>
                 </div>
                 <div class="form-group">
