@@ -19,8 +19,19 @@ export class ClientListComponent {
 
   public selectedItem = {busines_name: ""};
 
+  public edit_client_updated = false
+
   onDeleteItem(){
     this.clientListItems.splice(this.clientListItems.indexOf(this.selectedItem), 1);
+  }
+
+  onEditItem(item){
+    console.log(item)
+    item["edit_mode"] = true
+  }
+
+  onSaveEditItem(){
+    edit_client_updated = true
   }
 
 }
