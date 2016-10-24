@@ -22,6 +22,7 @@ export class AddClientComponent {
 
   onAddClient(newClient){
     newClient["id"] = this.id
+    newClient["business_name"] = newClient.name.value
     rootClients.push(newClient)
     newClient = {}
     this.new_client_added = false

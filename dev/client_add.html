@@ -1,10 +1,12 @@
 <h2>Create a New Client</h2>
 
-<form #newClient #newClientForm="ngForm" (ngSubmit)="onAddClient(newClient)">
-    <p>
-        <label>Business Name:</label>
-        <input type="text" [(ngModel)]="newClient.business_name" required>
-    </p>
+<form class="form-horizontal" #newClient #newClientForm="ngForm" (ngSubmit)="onAddClient(newClient)">
+    <div class="form-group">
+        <label for="name" class="col-sm-4 control-label">Business Name:</label>
+        <div class="col-sm-5">
+            <input class="form-control" id="name" type="text" (ngModel)="newClient.name" required>
+        </div>
+    </div>
     <p>
         <label>Email:</label>
         <input type="email" [(ngModel)]="newClient.contact_email" required>
