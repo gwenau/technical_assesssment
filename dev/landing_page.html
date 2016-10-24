@@ -9,4 +9,5 @@
 <button *ngIf="[rootVar] == 'clients'" class="btn btn-primary" (click)="showSection('home')">Home</button>
 <add-client *ngIf="[rootVar] == 'add_client'"></add-client>
 <br />
-<button *ngIf="[rootVar] == 'add_client'" class="btn btn-primary" (click)="showSection('home')">Home</button>
+<button *ngIf="[rootVar] == 'add_client'" class="btn btn-primary" (click)="showSection('home')">Home</button>  
+<button *ngIf="[rootVar] == 'add_client'"  class="btn btn-primary" (click)="showSection('clients')">See list of clients</button>

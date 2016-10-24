@@ -16,7 +16,11 @@ export class AddClientComponent {
   constructor(@Inject('rootVar') rootVar:string) { 
    }
 
+  new_client_added = true
+
   onAddClient(newClient){
     rootClients.push(newClient)
+    newClient = {}
+    this.new_client_added = false
   }
 }

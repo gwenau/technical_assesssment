@@ -10,10 +10,7 @@
         <input type="email" [(ngModel)]="newClient.contact_email" required>
     </p>
     <p>
-        <button type="submit" [disabled]="!newClientForm.valid">Submit</button>
+      <button type="submit" [disabled]="!newClientForm.valid">Submit</button>
     </p>
+    <p [hidden]="new_client_added">New client has been added</p>
 </form>
-
-
-<input type="text" #newItem/>
-<button (click)="onAddItem(newItem)">Add item</button>
