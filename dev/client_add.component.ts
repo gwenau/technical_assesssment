@@ -17,6 +17,6 @@ export class AddClientComponent {
    }
 
   onAddClient(newClient){
-    rootClients.push({business_name: newClient.business_name.value, contact_email: newClient.contact_email.value})
+    rootClients.push(newClient)
   }
 }
