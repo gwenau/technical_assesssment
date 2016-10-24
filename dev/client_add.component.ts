@@ -13,7 +13,7 @@ import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 export class AddClientComponent {
 
-  public newItem = 
+  public newClient = 
         {   id: null, 
             business_name: "", 
             abn: null, 
@@ -24,12 +24,11 @@ export class AddClientComponent {
             country: '', 
             state: "", 
             picture: ""
-        },
+        }
 
   constructor(@Inject('rootVar') rootVar:string) {  }
 
-  onAddItem(newItem){
-    rootClients.push({business_name: newItem.value})
+  onAddClient(){
+    rootClients.push({business_name: this.newClient.business_name.value, contact_email: this.newClient.contact_email.value)
   }
-
 }
