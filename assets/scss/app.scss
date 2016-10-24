@@ -12,8 +12,10 @@ body {
 $primary-brand-colour   :   #00be6d;
 $primary-heading-colour :   #00a55e;
 $btn-primary-bg-colour  :   #3ACA8D;
+$panel-border           :   1px solid #ccc;
 
 h2 {
+  margin-bottom: 40px;
   color: $primary-heading-colour;
   font-weight: 600;
   text-align: center;
@@ -29,6 +31,10 @@ p {
   font-size: 15px;
 }
 
+img {
+  margin-bottom: 20px;
+}
+
 .btn-primary {
   background-color: $btn-primary-bg-colour;
   border-color: $btn-primary-bg-colour;
@@ -36,4 +42,28 @@ p {
     background-color: $primary-brand-colour !important;
     border-color: $primary-brand-colour !important;  
   }
+}
+
+.btn-link {
+  color: $btn-primary-bg-colour;
+  border-color: $btn-primary-bg-colour;
+  border-radius: 4px;
+  &:hover, &:focus, &:active {
+    background-color: $primary-brand-colour !important;
+    border-color: $primary-brand-colour !important;  
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+}
+
+.panel {
+  border-radius: 0px;
+  border-bottom: $panel-border;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 15px 0;
+}
+
+.indent {
+  margin-right: 10px;
 }
